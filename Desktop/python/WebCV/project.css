@@ -1,0 +1,91 @@
+.all-project {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 2px solid #333; /* Kjo është kufiri i kutisë */
+  background-color: #f9f9f9; /* Ngjyra e prapavijës së kutisë */
+}
+
+.text-container {
+  text-align: center;
+  
+}
+.text-container h1{
+  margin-bottom: 20px;
+}
+.paragraph-container {
+  text-align: center;
+}
+.portfolio-container h2{
+  text-align: center;
+}
+.contact-container{
+  text-align: center;
+}
+.app-container{
+  text-align: center;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+.main {
+  margin-left: 40%;
+  height: 100vh;
+}
+.bgimg {
+  background-image: url('Pictures\Saved Pictures\wallper.1.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.bar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the links horizontally */
+  gap: 10px; /* Adds space between the links */
+}
+
+.bar-item {
+  text-decoration: none; /* Removes underline from links */
+  display: block; /* Ensures each link takes its own line */
+  padding: 10px 20px; /* Adds padding for better click area */
+  border: 1px solid transparent; /* Optional: Border for hover effects */
+  border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.bar-item:hover {
+  border-color: #000; /* Optional: Highlight border on hover */
+  background-color: #f1f1f1; /* Optional: Highlight background on hover */
+}
+
+img.zoom:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+
+}
+.round {
+  width: 150px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
