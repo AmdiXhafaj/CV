@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+
+
+<!-- Sidebar with image -->
+<nav class="sidebar">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon) -->
+<nav class="sidebar black animate-right xxlarge" style="display:none; padding-top: 150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="button black xxxlarge display-topright" style="padding: 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="bar-block center">
+    <a href="#" class="bar-item button text-grey hover-black" onclick="closeNav()" >Home</a>
+    <a href="#about" class="bar-item button text-grey hover-black" onclick="closeNav()">About</a>
+    <a href="#portfolio" class="bar-item button text-grey hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#contact" class="bar-item button text-grey hover-black" onclick="closeNav()">Kontakt</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="main">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="button top white xxlarge text-grey hover-text-black" style="width:auto;right:0;position:fixed;z-index:3;" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </span>
+
+  <!-- Header -->
+  <header class="container center" style="padding:128px 16px" id="home">
+    
+    <div class="text-container">
+    <h1 class="jumbo" ><i>Amdi Xhafaj</i></h1>
+    <p>Information and Comunication Technology student</p>
+    <img src="c:\Users\User\Documents\studentpicture.jpg" class="image hide-large hide-small round" style="display:block;width:60%;margin:auto;">
+    </div>
+    
+    
+  </header>
+  <!-- About Section -->
+  <div class="paragraph-container" id="about">
+    <hr>
+    <h2>About</h2>
+    
+    <p>Hello! I’m Amdi, a 19-year-old student currently pursuing a degree in technology at Beder University. Originally from Cakran, a beautiful town in southern Albania, I’m passionate about exploring new skills and growing my expertise in the tech world. 
+      Beyond my studies, I stay active with hobbies like boxing, MMA, and football, which keep me energized and focused. I also bring a diverse range of work experience, having held roles in cooking, bartending, and as a waiter, each of which has taught me valuable skills in teamwork, adaptability, and customer service. 
+      I’m excited to apply my knowledge and skills toward making a meaningful impact in the field of technology!</p>
+      <a href="C:\Users\User\Downloads\cv.pdf" download="C:\Users\User\Downloads\cv.pdf" class="button light-grey padding-large margin-top" type="submit">
+        <i class="btn btn--download"></i> Download Resume
+      </a>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="portfolio-container" id="portfolio">
+    <hr>
+    <h2 class="text-grey">My Portfolio</h2>
+    
+    <div class="row-padding" style="margin:0 -16px">
+      <div class="half">
+        <a href="file:///C:/Users/User/Desktop/python/classwork3.html" target="_blank">
+          <img src="c:\Users\User\Downloads\Travel-Agency.jpg" style="width: 150px; height: 100px;" alt="Project">
+        </a>
+        <img src="/images/rocks.jpg" style="width:100%">
+        <img src="/images/sailboat.jpg" style="width:100%">
+      </div>
+      <div class="half">
+        <img src="/images/underwater.jpg" style="width:100%">
+        <img src="/images/chef.jpg" style="width:100%">
+        <img src="/images/wedding.jpg" style="width:100%">
+        <img src="/images/p6.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Contact Section -->
+  <div class="contact-container" id="contact" style="margin-bottom:64px">
+    <hr>
+    <h2>Contact Me</h2>
+    
+    <div class="section">
+      <p><i class="fa fa-map-marker fa-fw xxlarge margin-right"></i> Tirana, AL</p>
+      <p><i class="fa fa-phone fa-fw xxlarge margin-right"></i> Phone: +355 693 653 512</p>
+      <p><i class="fa fa-envelope fa-fw xxlarge margin-right"> </i> Email: amdixhafaj58@gmail.com</p>
+    </div>
+    <fieldset>
+      <legend>Send me an Email</legend>
+      <p><input class="input padding-16 border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="input padding-16 border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="input padding-16 border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="input padding-16 border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="button light-grey padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  </fieldset>
+  </div>
+
+  <!-- Footer -->
+  <div class="app-container">
+  <footer>
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-instagram hover-opacity"></i>
+    <i class="fa fa-snapchat hover-opacity"></i>
+    <i class="fa fa-pinterest-p hover-opacity"></i>
+    <i class="fa fa-twitter hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+    
+  </footer>
+</div>
+</div>
+</div>
+
+<script>
+  // Open and close sidebar
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "60%";
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  
+  // Download Resume
+  function downloadResume() {
+    const link = document.createElement('a');
+    link.href ='c:\Users\User\Downloads\cv.pdf'; // Path to your PDF
+    link.download = 'c:\Users\User\Downloads\cv.pdf';
+    link.click();
+    alert('Resume is downloading...');
+  }
+  
+  // Send Message
+  function sendMessage() {
+    const form = document.getElementById('contactForm');
+    if (form.checkValidity()) {
+      alert('Thank you! Your message has been sent.');
+      form.reset();
+    } else {
+      alert('Please fill out all required fields.');
+    }
+  }
+  </script>
+</body>
+</html>
