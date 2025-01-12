@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="project.css">
+
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="sidebar">
+  <a href="#home"><strong>Home</strong></a>
+  <a href="#about"><strong>About</strong></a>
+  <a href="#portfolio"><strong>Portfolio</strong></a>
+  <a href="#contact"><strong>Contact</strong></a>
+  
+</nav>
+
+<!-- Main Content -->
+<div class="main">
+  <!-- Header -->
+  <header class="container center" id="home" style="padding:128px 16px">
+    <div class="text-container">
+      <h1><i>Amdi Xhafaj</i></h1>
+      <p>Information and Communication Technology Student</p>
+      <img src="c:\Users\User\Documents\studentpicture.jpg" class="image hide-large hide-small round">
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <div class="paragraph-container" id="about">
+    <hr>
+    <h2>About</h2>
+    <p>Hello! I’m Amdi, a 19-year-old student currently pursuing a degree in technology at Beder University. Originally from Cakran, a beautiful town in southern Albania, I’m passionate about exploring new skills and growing my expertise in the tech world. 
+        Beyond my studies, I stay active with hobbies like boxing, MMA, and football, which keep me energized and focused. I also bring a diverse range of work experience, having held roles in cooking, bartending, and as a waiter, each of which has taught me valuable skills in teamwork, adaptability, and customer service. 
+        I’m excited to apply my knowledge and skills toward making a meaningful impact in the field of technology!</p>
+        <a href="C:\Users\User\Downloads\cv.pdf" download="C:\Users\User\Downloads\cv.pdf" style="color: white;" class="button" type="submit">
+            <i class="fa fa--download"></i> Download Resume
+          </a>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="portfolio-container" id="portfolio">
+    <hr>
+    <h2>My Portfolio</h2>
+    <p>Here are some projects I’ve worked on:</p>
+    <!-- Portfolio Images --> 
+    <a href="file:///C:/Users/User/Desktop/python/classwork3.html" target="_blank">
+        <img src="c:\Users\User\Downloads\Travel-Agency.jpg" class="round-corners" alt="Project">
+      </a>
+      <a href="file:///C:/Users/User/Desktop/python/Portfolio2.html" target="_blank">
+        <img src="c:\Users\User\Pictures\movie-review-1.jpg" class="round-corners" alt="Project">
+      </a>
+      <a href="file:///C:/Users/User/Desktop/python/WebCV/CarRental.html" target="_blank">
+        <img src="c:\Users\User\Pictures\Carrental01.jpg" class="round-corners" alt="Project">
+      </a>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact-container" id="contact">
+    <hr>
+    <h2>Contact Me</h2>
+    <p><i class="fa fa-map-marker"></i> Tirana, AL</p>
+    <p><i class="fa fa-phone"></i> +355 693 653 512</p>
+    <p><i class="fa fa-envelope"></i> amdixhafaj58@gmail.com</p>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+ <form id="emailForm">
+  <fieldset>
+    <legend>Send me an Email</legend>
+    <p><input class="input padding-16 border" type="text" placeholder="Name" required name="Name"></p>
+    <p><input class="input padding-16 border" type="text" placeholder="Email" required name="Email"></p>
+    <p><input class="input padding-16 border" type="text" placeholder="Subject" required name="Subject"></p>
+    <p><input class="input padding-16 border" type="text" placeholder="Message" required name="Message"></p>
+    <p>
+      <button class="button light-grey padding-large" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </p>
+</fieldset>
+</form>
+</div>
+<script>
+    // Initialize EmailJS
+    emailjs.init("e-fs7m5ojDtewCNQC");  // Replace YOUR_USER_ID with your EmailJS User ID
+    
+    const form = document.getElementById('emailForm');
+    
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent form submission
+  
+      // Get form field values
+      const name = form.querySelector('[name="Name"]').value;
+      const email = form.querySelector('[name="Email"]').value;
+      const subject = form.querySelector('[name="Subject"]').value;
+      const message = form.querySelector('[name="Message"]').value;
+  
+      // Validate if all fields are filled
+      if (name && email && subject && message) {
+        const templateParams = {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message
+        };
+  
+        // Send email using EmailJS
+        emailjs.send("service_1duvv3g", "template_twhq46i", templateParams)  // Replace with your Service ID and Template ID
+          .then(function(response) {
+            alert('Message sent successfully!');
+            form.reset();  // Clear the form after sending
+          }, function(error) {
+            alert('Failed to send message: ' + error.text);
+          });
+      } else {
+        alert("Please fill in all fields.");
+      }
+    });
+  </script>
+  <!-- Footer -->
+  <footer class="footer" style="text-align: center; padding: 20px;">
+    <p>Follow me on social medias</p>
+    <a href="https://www.instagram.com/_amdi_.xh/" style="color: white;" target="_blank"><i class="fa fa-instagram hover-opacity"></i></a>
+    <a href="https://github.com/account" style="color: white;" target="_blank"><i class="fa fa-github hover-opacity"></i></a>
+    <i class="fa fa-twitter hover-opacity"></i>
+    <a href="https://www.linkedin.com/in/amdi-xhafaj-527b292a9/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BCNLS0ESTSLuKE2dkkBXvtA%3D%3D" style="color: white;" target="_blank"><i class="fa fa-linkedin hover-opacity"></i></a>
+  </footer>
+</div>
+
+</body>
+</html>

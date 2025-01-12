@@ -1,91 +1,63 @@
-.all-project {
-  max-width: 800px;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border: 2px solid #333; /* Kjo është kufiri i kutisë */
-  background-color: #f9f9f9; /* Ngjyra e prapavijës së kutisë */
-}
-
-.text-container {
-  text-align: center;
-  
-}
-.text-container h1{
-  margin-bottom: 20px;
-}
-.paragraph-container {
-  text-align: center;
-}
-.portfolio-container h2{
-  text-align: center;
-}
-.contact-container{
-  text-align: center;
-}
-.app-container{
-  text-align: center;
-}
 body {
+  background-image: url('c:/Users/User/Pictures/Saved Pictures/6324eb31fcce80426ffde789f00efcd2.jpg');
+  background-size: cover; /* Resize the background image to cover the entire page */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
+
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 20%;
   height: 100%;
-  background: #f1f1f1;
-  overflow: hidden;
+  background-color: url('c:/Users/User/Pictures/Saved Pictures/c1254cfc6815a3ea638e9314767c4dc5.jpg');
+  overflow-x: hidden;
+  padding-top: 20px;
 }
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: white;
+  color: black;
+}
+
 .main {
-  margin-left: 40%;
-  height: 100vh;
-}
-.bgimg {
-  background-image: url('Pictures\Saved Pictures\wallper.1.jpg'); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
+  margin-left: 20%;
+  padding: 16px;
 }
 
-
-.bar-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center align the links horizontally */
-  gap: 10px; /* Adds space between the links */
+.text-container, .portfolio-container, .contact-container, .paragraph-container, .footer {
+  text-align: center;
+  color: white;
+}
+.round-corners{
+border-radius: 15px;
+width: 150px;
+height: 100px;
 }
 
-.bar-item {
-  text-decoration: none; /* Removes underline from links */
-  display: block; /* Ensures each link takes its own line */
-  padding: 10px 20px; /* Adds padding for better click area */
-  border: 1px solid transparent; /* Optional: Border for hover effects */
-  border-radius: 5px; /* Optional: Rounded corners */
+.button {
+  cursor: pointer;
 }
 
-.bar-item:hover {
-  border-color: #000; /* Optional: Highlight border on hover */
-  background-color: #f1f1f1; /* Optional: Highlight background on hover */
-}
-
-img.zoom:hover {
-  transform: scale(1.1);
-  transition: transform 0.5s ease;
-
-}
 .round {
-  width: 150px;
+  width: 300px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
   margin: auto;
 }
+
+
 
