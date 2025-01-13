@@ -15,6 +15,7 @@
   <a href="#home"><strong>Home</strong></a>
   <a href="#about"><strong>About</strong></a>
   <a href="#portfolio"><strong>Portfolio</strong></a>
+  <a href="#Blog"><strong>Blog</strong></a>
   <a href="#contact"><strong>Contact</strong></a>
   
 </nav>
@@ -49,15 +50,49 @@
     <p>Here are some projects I’ve worked on:</p>
     <!-- Portfolio Images --> 
     <a href="file:///C:/Users/User/Desktop/python/classwork3.html" target="_blank">
-        <img src="c:\Users\User\Downloads\Travel-Agency.jpg" class="round-corners" alt="Project">
+        <img src="c:\Users\User\Downloads\Travel-Agency.jpg" class="round-corners" alt="fly-agency image">
       </a>
       <a href="file:///C:/Users/User/Desktop/python/Portfolio2.html" target="_blank">
-        <img src="c:\Users\User\Pictures\movie-review-1.jpg" class="round-corners" alt="Project">
+        <img src="c:\Users\User\Pictures\movie-review-1.jpg" class="round-corners" alt="movie-page image">
       </a>
       <a href="file:///C:/Users/User/Desktop/python/WebCV/CarRental.html" target="_blank">
-        <img src="c:\Users\User\Pictures\Carrental01.jpg" class="round-corners" alt="Project">
+        <img src="c:\Users\User\Pictures\Carrental01.jpg" class="round-corners" alt="car-rental image">
       </a>
   </div>
+  <hr>
+  <!-- Blog Section-->
+   <div class="blog-container" id="Blog">
+    <h2>Blog</h2>
+    <p><strong>The Evolution of Databases: Recent Changes and Innovations</strong><br>Databases are the backbone of modern applications, enabling efficient storage, retrieval, and management of data. Recent advancements are revolutionizing how organizations handle data, offering greater scalability, flexibility, and performance.
+      <h3>1. Cloud Databases</h3>
+      <div class="blog-img">
+        <img src="c:\Users\User\Pictures\cloud.jpg" class="normal-round-corners" alt="Cloud image">
+      </div>
+      Cloud-based solutions like AWS RDS, Google Cloud SQL, and Azure Database are becoming the norm. They provide scalability, automated maintenance, and high availability without requiring physical infrastructure.<br>
+      Benefits:<br>
+      <strong>On-Demand Scaling:</strong> Easily adjust storage and processing power.<br>
+      <strong>Cost Efficiency:</strong> Pay only for what you use.
+      
+      <h3>2. NoSQL Databases</h3>
+      <div class="blog-img">
+      <img src="c:\Users\User\Pictures\no-sql-databases.png" class="normal-round-corners" alt="NoSQL-Image">
+      </div>
+      NoSQL databases such as MongoDB, Cassandra, and Redis are gaining traction for their ability to handle unstructured and semi-structured data.<br>
+      
+      Key Features:<br>
+      <strong>Flexibility:</strong> Schema-less design allows for rapid development.<br>
+      <strong>Performance:</strong> Optimized for big data and real-time applications.
+      
+      <h3>3. AI and Machine Learning Integration</h3>
+      <div class="blog-img">
+        <img src="c:\Users\User\Pictures\ai-vs-machine-learning.jpg" class="normal-round-corners" alt="machine-learning image">
+      </div>
+      
+      Databases now incorporate AI-driven features for automated query optimization, anomaly detection, and predictive analytics.<br>
+      Innovations:<br>
+      <strong>Self-Healing Systems:</strong> Automated performance tuning.<br>
+      <strong>Advanced Analytics:</strong> Real-time insights and decision-making.</p>
+   </div>
 
   <!-- Contact Section -->
   <div class="contact-container" id="contact">
@@ -82,43 +117,54 @@
 </fieldset>
 </form>
 </div>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "e-fs7m5ojDtewCNQC",
+      });
+   })();
+</script>
 <script>
-    // Initialize EmailJS
-    emailjs.init("e-fs7m5ojDtewCNQC");  // Replace YOUR_USER_ID with your EmailJS User ID
-    
-    const form = document.getElementById('emailForm');
-    
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();  // Prevent form submission
-  
-      // Get form field values
-      const name = form.querySelector('[name="Name"]').value;
-      const email = form.querySelector('[name="Email"]').value;
-      const subject = form.querySelector('[name="Subject"]').value;
-      const message = form.querySelector('[name="Message"]').value;
-  
-      // Validate if all fields are filled
-      if (name && email && subject && message) {
-        const templateParams = {
-          name: name,
-          email: email,
-          subject: subject,
-          message: message
-        };
-  
-        // Send email using EmailJS
-        emailjs.send("service_1duvv3g", "template_twhq46i", templateParams)  // Replace with your Service ID and Template ID
-          .then(function(response) {
-            alert('Message sent successfully!');
-            form.reset();  // Clear the form after sending
-          }, function(error) {
-            alert('Failed to send message: ' + error.text);
-          });
-      } else {
-        alert("Please fill in all fields.");
-      }
-    });
-  </script>
+ 
+  emailjs.init("e-fs7m5ojDtewCNQC");  //Public key emailJS
+  const form = document.getElementById('emailForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent form submission
+
+    // Collect form values
+    const name = form.querySelector('[name="Name"]').value;
+    const email = form.querySelector('[name="Email"]').value;
+    const subject = form.querySelector('[name="Subject"]').value;
+    const message = form.querySelector('[name="Message"]').value;
+
+    // Check if all fields are filled
+    if (name && email && subject && message) {
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message
+      };
+
+      // Use EmailJS to send email
+      emailjs.send("service_1duvv3g", "template_twhq46i", templateParams)
+        .then(function(response) {
+          alert('Message sent successfully!');
+          form.reset();  // Clear the form after sending
+        }, function(error) {
+          alert('Failed to send message. Please try again. Error: ' + error.text);
+        });
+    } else {
+      alert("Please fill in all fields before submitting.");
+    }
+  });
+</script>
+
+
   <!-- Footer -->
   <footer class="footer" style="text-align: center; padding: 20px;">
     <p>Follow me on social medias</p>
