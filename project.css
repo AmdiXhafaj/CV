@@ -1,10 +1,11 @@
 body {
-  background-image: url('c:/Users/User/Pictures/Saved Pictures/6324eb31fcce80426ffde789f00efcd2.jpg');
-  background-size: cover; /* Resize the background image to cover the entire page */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background: linear-gradient(to bottom, #013220, #001F3F);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .sidebar {
@@ -13,10 +14,9 @@ body {
   left: 0;
   width: 20%;
   height: 100%;
-  background-color: url('Saved Pictures/c1254cfc6815a3ea638e9314767c4dc5.jpg');
   overflow-x: hidden;
   padding-top: 20px;
-  box-shadow: 0 0 5px rgb(38, 38, 192), 0 0 25px rgb(38, 38, 192);
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan;
 }
 
 .sidebar a {
@@ -31,7 +31,7 @@ body {
 .sidebar a:hover {
   background-color: white;
   color: black;
-  box-shadow: 0 0 5px rgb(38, 38, 192), 0 0 25px rgb(38, 38, 192), 0 0 50px rgb(38, 38, 192), 0 0 100px rgb(38, 38, 192), 0 0 200px rgb(38, 38, 192);
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan;
 }
 
 .main {
@@ -84,16 +84,16 @@ height: 100px;
   margin: auto;
 }
 .blog-container {
-  width: 80%; /* Mund ta përshtatësh madhësinë sipas nevojës */
+  width: 80%;
   margin: 20px auto;
   padding: 20px;
   background-color: black;
   border: 1px solid #ddd;
-  border-radius: 15px; /* Qoshe të rrumbullakosura */
+  border-radius: 15px; /*ben cepat te rrumbullakosura*/
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hijë për efekt estetik */
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  box-shadow: 0 0 5px rgb(38, 38, 192), 0 0 25px rgb(38, 38, 192), 0 0 50px rgb(38, 38, 192);
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
   
 }
 
