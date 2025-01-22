@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
   background: linear-gradient(to bottom, #013220, #001F3F);
   background-repeat: no-repeat;
